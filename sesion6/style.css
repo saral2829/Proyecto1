@@ -1,0 +1,153 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2.Modelo de caja (Box model) --> margin, border, padding, content
+3.Tipografía --> tipos, tamaños de fuente, etc
+4.Estilos visuales --> box-shadow, border-radius, gradient, etc
+5.Otros --> reglas CSS y más
+*/
+
+:root{
+    /* Colores */
+ 
+    --soft-orange: #ffe9d5;   
+    --warm-black: #282623;
+    --black: #201e1c;  
+    --off-white: #faf8f7;
+    --just-white: #fff;
+
+}
+
+
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+}
+
+header{
+    position: relative;
+    /*  alinear contenido:displayflex */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background:url(img/gat.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+.header--title--container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+}
+
+.header--title--container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header--title--container p{
+    margin-top: 25px;
+    font-size:1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+
+}
+
+.header--title--container .header--botton{
+    position: absolute;
+    top: 270px;
+    left: calc(50% - 114.5px);
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    
+    background-color: var(--off-white);
+    /* Sombra */
+    box-shadow: 0px 4px 8px rgba(89,73,30,0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black); 
+
+}
+
+.header--botton span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./img/down-arrow.svg');
+}
+
+/* main */
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-container{
+    width: 100%;
+    display:flex;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    justify-content:center;
+}
+.main-container img{
+    width:40%;
+    height:80%
+}
+.cards{
+    width:20%;
+    
+
+}
+
+/* .main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width:900px ;
+    margin: 0 auto;
+
+} */
+
+footer {
+    width: 100vw;
+    min-width: 320px;
+    height: 80px;
+    background-color: var(--warm-black);
+    display: flex;
+    justify-content: space-evenly; 
+    bottom:0;
+    position:absolute;
+    align-items: center;
+}
+
+.text--footer{
+    font-size: 2.6rem;
+    color:var(--off-white);
+    font-family: "DM Sans", sans-serif;
+}
